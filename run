@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -z "$DESTINATION" ]; then
+  DESTINATION='platform=iOS Simulator,name=iPhone 14,OS=latest'
+fi
+
+if [ -z ${OPENAI_API_KEY+x} ]; then
+	echo "OPENAI_API_KEY has not been set"
+	exit 1;
+fi
+
+if [ -z ${TASK+x} ]; then
+	echo "TASK has not been set"
+	exit 1;
+fi
+
+TEST_RUNNER_OPENAI_API_KEY=${OPENAI_API_KEY} \
+TEST_RUNNER_TASK=${TASK} \
+	xcodebuild -scheme PhoneGPT test \
+		-destination "${DESTINATION}" \
+		-parallel-testing-enabled NO
+		CODE_SIGNING_ALLOWED="NO"
