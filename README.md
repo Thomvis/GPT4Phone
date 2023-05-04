@@ -1,6 +1,8 @@
 # GPT4Phone
 Let GPT-4 control your iPhone (or a simulator). Accompanying blog post: https://www.thomasvisser.me/2023/05/04/gpt4phone/.
 
+[![Example video](https://img.youtube.com/vi/2TQ4u9S_PrU/hqdefault.jpg)](https://youtu.be/2TQ4u9S_PrU)
+
 ## Usage
 Clone the repo on your machine, make sure you have Xcode installed and then execute the following command from the project’s directory:
 
