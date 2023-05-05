@@ -25,7 +25,7 @@ final class PhoneGPTTests: XCTestCase {
 
                 Task: \(task)
 
-                Use all apps and content on my phone to your advantage. Only use your general knowledge if it cannot be looked up on my phone.
+                You can use all apps and content on my phone to complete the task. Personal information must be observed using my phone. Do not make this up.
                 """)
             ],
             maxTokens: 256,
